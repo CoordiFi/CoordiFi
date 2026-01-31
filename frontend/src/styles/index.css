@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+    @apply bg-bg-dark text-white antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-bg-dark;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-600;
+}
+
+/* Button styles */
+.btn-primary {
+    @apply px-4 py-2 bg-primary-600 hover:bg-primary-500 text-white font-medium rounded-lg transition-colors;
+}
+
+.btn-secondary {
+    @apply px-4 py-2 bg-bg-elevated hover:bg-bg-hover text-white font-medium rounded-lg border border-gray-700 transition-colors;
+}
+
+/* Card styles */
+.card {
+    @apply bg-bg-elevated border border-gray-800 rounded-xl p-6;
+}
