@@ -2,8 +2,17 @@
 pragma solidity ^0.8.20;
 
 interface ISupreme {
-    enum InstanceType { NFT, OTC, FREELANCE }
-    enum EscrowStatus { ACTIVE, SETTLED, REFUNDED, CANCELLED }
+    enum InstanceType {
+        NFT,
+        OTC,
+        FREELANCE
+    }
+    enum EscrowStatus {
+        ACTIVE,
+        SETTLED,
+        REFUNDED,
+        CANCELLED
+    }
 
     struct EscrowInstance {
         address escrowAddress;
@@ -65,9 +74,16 @@ interface ISupreme {
         uint256 deadline
     ) external returns (uint256 instanceId, address escrowAddress);
 
-    function getInstance(uint256 instanceId) external view returns (EscrowInstance memory);
-    function getUserInstances(address user) external view returns (uint256[] memory);
-    function updateInstanceStatus(uint256 instanceId, EscrowStatus status) external;
+    function getInstance(
+        uint256 instanceId
+    ) external view returns (EscrowInstance memory);
+    function getUserInstances(
+        address user
+    ) external view returns (uint256[] memory);
+    function updateInstanceStatus(
+        uint256 instanceId,
+        EscrowStatus status
+    ) external;
     function setPlatformFee(uint256 newFeeBPS) external;
     function setFeeCollector(address newCollector) external;
     function nftEscrowTemplate() external view returns (address);
