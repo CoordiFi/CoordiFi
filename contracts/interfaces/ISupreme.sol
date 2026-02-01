@@ -51,10 +51,7 @@ interface ISupreme {
         uint256 milestoneCount
     );
 
-    event InstanceStatusUpdated(
-        uint256 indexed instanceId,
-        EscrowStatus newStatus
-    );
+    event InstanceStatusUpdated(uint256 indexed instanceId, EscrowStatus newStatus);
     event PlatformFeeUpdated(uint256 oldFee, uint256 newFee);
     event FeeCollectorUpdated(address oldCollector, address newCollector);
 
@@ -65,13 +62,7 @@ interface ISupreme {
         uint256 mintPrice,
         uint256 splitBPS,
         uint256 deadline
-    )
-        external
-        returns (
-            uint256 instanceId,
-            address smartMintWallet,
-            address escrowAddress
-        );
+    ) external returns (uint256 instanceId, address smartMintWallet, address escrowAddress);
 
     function deployOTCEscrow(
         address maker,

@@ -2,29 +2,13 @@
 pragma solidity ^0.8.20;
 
 interface INFTEscrow {
-    enum Status {
-        CREATED,
-        CAPITAL_LOCKED,
-        MINTED,
-        SETTLED,
-        REFUNDED
-    }
+    enum Status { CREATED, CAPITAL_LOCKED, MINTED, SETTLED, REFUNDED }
 
-    event Initialized(
-        address indexed wlHolder,
-        address indexed capitalHolder,
-        address nftContract,
-        uint256 mintPrice
-    );
+    event Initialized(address indexed wlHolder, address indexed capitalHolder, address nftContract, uint256 mintPrice);
     event CapitalLocked(address indexed capitalHolder, uint256 amount);
     event MintExecuted(uint256 indexed tokenId, address smartMintWallet);
     event NFTVerified(uint256 indexed tokenId);
-    event Settled(
-        address indexed wlHolder,
-        address indexed capitalHolder,
-        uint256 wlShare,
-        uint256 capitalShare
-    );
+    event Settled(address indexed wlHolder, address indexed capitalHolder, uint256 wlShare, uint256 capitalShare);
     event Refunded(address indexed to, uint256 amount);
     event StatusChanged(Status oldStatus, Status newStatus);
 
@@ -45,16 +29,13 @@ interface INFTEscrow {
     function settle() external;
     function refund() external;
 
-    function getDetails()
-        external
-        view
-        returns (
-            address wlHolder,
-            address capitalHolder,
-            address nftContract,
-            uint256 mintPrice,
-            uint256 splitBPS,
-            uint256 deadline,
-            Status status
-        );
+    function getDetails() external view returns (
+        address wlHolder,
+        address capitalHolder,
+        address nftContract,
+        uint256 mintPrice,
+        uint256 splitBPS,
+        uint256 deadline,
+        Status status
+    );
 }
