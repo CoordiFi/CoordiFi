@@ -7,7 +7,6 @@ interface ISupreme {
         OTC,
         FREELANCE
     }
-
     enum EscrowStatus {
         ACTIVE,
         SETTLED,
@@ -94,10 +93,8 @@ interface ISupreme {
         uint256 instanceId,
         EscrowStatus status
     ) external;
-
     function setPlatformFee(uint256 newFeeBPS) external;
     function setFeeCollector(address newCollector) external;
-
     function nftEscrowTemplate() external view returns (address);
     function otcEscrowTemplate() external view returns (address);
     function freelanceEscrowTemplate() external view returns (address);
