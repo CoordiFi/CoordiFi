@@ -4,13 +4,16 @@
 [![Ethereum](https://img.shields.io/badge/Ethereum-Sepolia-blue?style=for-the-badge&logo=ethereum)](https://ethereum.org/)
 [![Yellow Network](https://img.shields.io/badge/Yellow_Network-L2_Integration-yellow?style=for-the-badge)](https://yellow.org/)
 
-**A trust-minimized escrow protocol enabling NFT whitelist coordination, OTC trading, and milestone-based freelance payments—powered by smart contracts, IPFS, and Yellow Network's gasless Layer 2.**
+**A trust-minimized escrow protocol solving coordination problems in decentralized finance - powered by smart contracts, IPFS, and Yellow Network's gasless Layer 2.**  
+**Demonstrated through three example implementations: NFT capital partnerships, peer-to-peer OTC trading, and milestone-based freelance payments.**
 
 ---
 
-## 🎯 The Problem We Solve
+## 🎯 Coordination Problems We Address
 
-The crypto ecosystem faces critical coordination challenges across multiple domains:
+Decentralized finance and Web3 applications face coordination problems that need trustless escrow solutions. Our protocol is a flexible framework that can handle different scenarios like atomic swaps, conditional payments, multi-party agreements, and more.
+
+**Here are three examples showing what the protocol can do:**
 
 ### NFT Minting
 
@@ -35,7 +38,7 @@ The crypto ecosystem faces critical coordination challenges across multiple doma
 
 ## 💡 Our Solution
 
-**CoordiFi** provides three specialized escrow systems:
+**CoordiFi** provides modular escrow primitives for programmable coordination in Web3. We built:
 
 | 🎨 NFT Whitelist Coordination                          | 💱 OTC Trading                                            | 💼 Freelance Escrow                              |
 | ------------------------------------------------------ | --------------------------------------------------------- | ------------------------------------------------ |
@@ -910,8 +913,14 @@ Visit `http://localhost:5173` to see the app!
    - Visit [Sepolia Faucet](https://sepoliafaucet.com/)
    - Enter your wallet address
    - Receive 0.5 ETH for testing
+   
+3. **Get Test USDC**
+   - Visit [Circle Faucet](https://faucet.circle.com/)
+   - Select Ethereum Sepolia network
+   - Enter your wallet address
+   - Receive 20 USDC for testing
 
-3. **Connect to App**
+4. **Connect to App**
    - Click "Connect Wallet"
    - Select MetaMask
    - Approve connection
@@ -1110,21 +1119,18 @@ CoordiFi/
 
 ---
 
-## 🌟 Why HackMoney Coordination Protocol Matters
+## 🌟 Why This Protocol Matters
 
-**For the NFT Ecosystem:**  
-Democratizes access to high-value mints by enabling trustless capital partnerships
+**For the Ecosystem:**
 
-**For DeFi Users:**  
-Provides safer OTC trading with price validation and atomic settlement
+CoordiFi isn't just these three applications - it's infrastructure for any financial coordination that needs trustless escrow. These examples show how the same protocol can handle:
 
-**For Freelancers:**  
-Offers transparent, low-fee work coordination with built-in dispute resolution
+- **NFT Capital Partnerships** - Makes expensive mints accessible through trustless profit-sharing
+- **OTC Token Trading** - Safe peer-to-peer swaps with price validation and atomic execution  
+- **Freelance Payments** - Milestone-based releases with dispute resolution and cheap L2 coordination
+- **Future Uses**: DAO treasury management, conditional payments, and many more programmable coordination patterns.
 
-**For the Industry:**  
-Demonstrates how Layer 2 solutions can dramatically reduce costs while maintaining security
-
-Together, we're building the infrastructure for trustless coordination in Web3. 🚀
+Together, we're building infrastructure for trustless coordination in Web3. 🚀
 
 ---
 
@@ -1139,6 +1145,7 @@ Special thanks to the sponsors and technologies that made this project possible:
 - **OpenZeppelin** - For secure smart contract libraries
 - **Foundry** - For powerful development tooling
 - **Ethereum Foundation** - For the Sepolia testnet
+- **ENS** - For human-readable Ethereum addresses and improved on-chain UX
 
 Built with ❤️ by Team **[The Arths]**:
 
